@@ -1,14 +1,20 @@
+import styled from "./Favoritos.module.css";
 import Banner from "components/Banner";
 import Titulo from "components/Titulo";
-import favoritos from "../../json/db.json";
 import Card from "components/Card";
+import { useFavoritoContext } from "hooks/useFavoritos";
 
 function Favoritos() {
+  const { favoritos } = useFavoritoContext();
   return (
     <>
       <Banner imagem="favoritos" />
-      <Titulo>Meus Favoritos</Titulo>
-      {favoritos.map(favorito => <Card />)}
+      <Titulo>
+        <h1>Meus favoritos</h1>
+      </Titulo>
+      <section className={styled.container}>
+        {favoritos.map(favorito => <Card key={favorito.id} {...favorito} />)}
+      </section>
     </>
   );
 };

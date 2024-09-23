@@ -9,7 +9,7 @@
 }
 
 .container h2 {
-  font-size: 18px;
+  font-size: 1em;
   font-weight: 700;
   text-align: left;
   margin: 1em;
@@ -24,4 +24,13 @@
 .favoritar {
   cursor: pointer;
   margin: 1em;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--preto);
+}
+
+.link h2:hover {
+  text-decoration: underline;
 }
